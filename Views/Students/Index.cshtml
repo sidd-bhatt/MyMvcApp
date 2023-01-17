@@ -1,0 +1,18 @@
+@Model Students
+
+
+@{
+List<Students> student=new List<Students>();
+    student=(List<Students>)ViewData["students"];
+
+}
+
+@foreach(Students s in student)
+{
+<ul>
+    <li>@s.Sid</li>
+    <li>@s.Sname</li>
+    <li>@s.Course</li>
+</ul>
+
+}
